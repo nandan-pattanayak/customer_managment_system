@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>are You want to delete this {{item}}</p>
+<form method="POST">
+	{% csrf_token %}
+	<a class="btn btn-sm btn-info" href="{% url 'home' %}">Cancel</a>
+	<input class="btn btn-sm btn-info" type="submit" name="submit">
+</form>
+{% endblock content %}
